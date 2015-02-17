@@ -36,6 +36,9 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+h4{
+  font-size: 2.25rem;
+}
 a{
   color: #f8f8f8;
   font-weight: 300;
@@ -65,6 +68,7 @@ a{
   h4{
     border-bottom: 1px solid $brand-white;
     display: inline-block;
+    font-size: 2rem;
     padding-bottom: 20px;
   }
 }
@@ -103,9 +107,6 @@ a{
     background-color: $brand-primary-alpha;
     color: $brand-white;
     padding: $padding-sides;
-    h4{
-      font-size: 2.5rem;
-    }
     form{
       text-align: left;
       width: 100%;
@@ -148,7 +149,6 @@ a{
   margin-top: $margin-top;
   padding: $basic-padding;
   h4{
-    font-size: 2.5rem;
     margin-bottom: $basic-margin;
     margin-top: 0;
   }
