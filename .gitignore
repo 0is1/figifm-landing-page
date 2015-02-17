@@ -8,3 +8,4 @@ test/bower_components
 .jshintrc
 .sass-cache
 .tmp
+.DS_Store
