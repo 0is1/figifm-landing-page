@@ -30,12 +30,11 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 body {
-  background: url('../images/bg.jpg') no-repeat center center fixed;
-  background-size: cover;
   font-family: 'Lato', "Helvetica Neue", arial, sans-serif;
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
 h4{
   font-size: 2.25rem;
 }
@@ -47,7 +46,15 @@ a{
     text-decoration: none;
   }
 }
-
+.text-shadow{
+  text-shadow: 0 1px 1px rgba(49,49,49,0.5);
+}
+.white-text{
+  color: $brand-white;
+}
+.bold-text{
+  font-weight: 600;
+}
 .header,
 .footer {
   padding-left: 15px;
@@ -55,20 +62,23 @@ a{
 }
 
 .header {
-  color: $brand-white;
   padding-bottom: $padding-bottom;
 
-  h2 {
+  h1 {
     font-size: 5rem;
     font-weight: 300;
+    left: -9999px;
     line-height: 60px;
     margin-top: 0;
     margin-bottom: 0;
+    visibility: hidden;
+    position: absolute;
   }
   h4{
     border-bottom: 1px solid $brand-white;
     display: inline-block;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    margin: 0;
     padding-bottom: 20px;
   }
 }
@@ -146,7 +156,6 @@ a{
 }
 .social-buttons{
   background-color: $brand-white-alpha;
-  margin-top: $margin-top;
   padding: $basic-padding;
   h4{
     margin-bottom: $basic-margin;
@@ -158,8 +167,35 @@ a{
     vertical-align: top;
   }
 }
+
+.social-media{
+  background-color: $brand-primary;
+  background-color: $brand-primary-alpha;
+  h2{
+    color: $brand-white;
+  }
+}
+.social-buttons, .social-media{
+  margin-top: $margin-top;
+}
+@media screen and (min-width: 320px) {
+  body{
+    background: url('../images/bg-small.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  .social-buttons{
+    > div {
+      display: block;
+      margin-top: $margin-top;
+    }
+  }
+}
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
+  body{
+    background: url('../images/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
   .container {
     max-width: $content-max-width;
   }
@@ -178,6 +214,12 @@ a{
       form{
         width: 50%;
       }
+    }
+  }
+  .social-buttons{
+    > div {
+      display: inline-block;
+      margin-top: 0;
     }
   }
 }

@@ -11,7 +11,7 @@
     <meta property="og:title" content="Figi.fm – Keikkoja, joille täytyy päästä!">
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://www.figi.fm">
-    <meta property="og:image" content="images/figi.png">
+    <meta property="og:image" content="http://www.figi.fm/images/figifm-logo.png">
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <!-- endbower -->
@@ -39,13 +39,14 @@
     <![endif]-->
 
     <div class="container">
-      <div class="header text-center">
-        <h2>Figi.fm</h2>
-        <h4>Keikkoja, joille täytyy päästä!</h4>
+      <div class="header text-center white-text">
+        <h1>Figi.fm</h1>
+        <img class="img-responsive center-block" src="images/figifm-logo.png" alt="Figi.fm – Keikkoja, joille täytyy päästä!" title="Figi.fm – Keikkoja, joille täytyy päästä!">
+        <h4 class="bold-text">Keikkoja, joille täytyy päästä!</h4>
       </div>
       <div class="jumbotron row">
         <div class="col-xs-12">
-          <h2>Tulossa alkukesän aikana Android -puhelimille...</h2>
+          <h2>Tulossa alkukesän aikana Android -puhelimille.</h2>
           <figure class="center-block">
             <img class="img-rounded center-block img-responsive" src="images/figi.png">
           </figure>
@@ -67,8 +68,12 @@
         </div>
         <div class="social-buttons col-xs-12">
           <h4>Kerro Figistä maailmalle!</h4>
-          <div class="fb-like" data-href="https://figi.fm" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+          <div class="fb-like" data-href="http://figi.fm" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" data-width="146"></div>
           <div><a class="twitter-share-button" href="https://twitter.com/share?url=http://www.figi.fm&amp;via=figifm&amp;text=Keikkoja&comma;%20joille%20t&auml;ytyy%20p&auml;&auml;st&auml;&excl;&amp;hashtags=keikat&comma;figifm">Jaa Twitterissä</a></div>
+        </div>
+        <div class="social-media col-xs-12">
+        <h2>Figi.fm @ Twitter</h2>
+          <a class="twitter-timeline" href="https://twitter.com/figifm" data-widget-id="581007003801223168">Twiittejä käyttäjältä @figifm</a>
         </div>
       </div>
 
@@ -90,7 +95,7 @@
     <script>
     window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
     </script>
-    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script async type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <!--<script src="../bower_components/jquery/dist/jquery.js"></script>-->
@@ -113,7 +118,7 @@
         <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
-        <script src="scripts/main.js"></script>
+        <script async src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>
 </html>
