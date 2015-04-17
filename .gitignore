@@ -9,3 +9,5 @@ test/bower_components
 .sass-cache
 .tmp
 .DS_Store
+*.sublime-project
+*.sublime-workspace
