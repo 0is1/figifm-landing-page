@@ -3,6 +3,7 @@
 // generated on 2015-01-29 using generator-gulp-webapp 0.2.0
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
+var del = require('del');
 var sass = require('gulp-ruby-sass');
 
 gulp.task('styles', function() {
@@ -55,11 +56,25 @@ gulp.task('images', function() {
     .pipe(gulp.dest('dist/images'));
 });
 
+gulp.task('customImages', function() {
+  return gulp.src('app/styles/*.{gif,png,jpg}')
+    .pipe(gulp.dest('dist/styles'));
+});
+
 gulp.task('fonts', function() {
   return gulp.src(require('main-bower-files')().concat('app/fonts/**/*'))
-    .pipe($.filter('**/*.{eot,svg,ttf,woff}'))
+    .pipe($.filter('**/*.{eot,svg,ttf,woff,woff2}'))
     .pipe($.flatten())
+    .pipe(gulp.dest('dist/styles/fonts'));
+});
+
+gulp.task('customFonts', ['fonts'], function() {
+  return gulp.src('dist/styles/fonts/glyphicons-halflings-regular.{eot,svg,ttf,woff,woff2}')
     .pipe(gulp.dest('dist/fonts'));
+});
+
+gulp.task('cleanFonts', ['customFonts'], function() {
+  return del(['dist/styles/fonts/glyphicons-halflings-regular.*']);
 });
 
 gulp.task('extras', function() {
@@ -128,7 +143,7 @@ gulp.task('watch', ['connect'], function() {
   gulp.watch('bower.json', ['wiredep']);
 });
 
-gulp.task('build', ['jshint', 'html', 'images', 'fonts', 'extras'], function() {
+gulp.task('build', ['jshint', 'html', 'images', 'fonts', 'customFonts', 'cleanFonts', 'customImages', 'extras'], function() {
   return gulp.src('dist/**/*').pipe($.size({
     title: 'build',
     gzip: true
