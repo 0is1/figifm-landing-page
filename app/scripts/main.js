@@ -21,7 +21,8 @@
     });
     $('a[href^="http"]').click(function(e) {
       e.preventDefault();
-      window.open(e.target.href);
+      var url = e.target.href ||  e.currentTarget.href;
+      window.open(url);
     });
   });
 })();
