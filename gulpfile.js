@@ -3,6 +3,7 @@
 // generated on 2015-01-29 using generator-gulp-webapp 0.2.0
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
+var jshint = require('gulp-jshint');
 var del = require('del');
 var sass = require('gulp-ruby-sass');
 
@@ -20,9 +21,8 @@ gulp.task('styles', function() {
 
 gulp.task('jshint', function() {
   return gulp.src('app/scripts/**/*.js')
-    .pipe($.jshint())
-    .pipe($.jshint.reporter('jshint-stylish'))
-    .pipe($.jshint.reporter('fail'));
+    .pipe(jshint())
+    .pipe(jshint.reporter('fail'));
 });
 
 gulp.task('html', ['styles'], function() {
@@ -30,16 +30,12 @@ gulp.task('html', ['styles'], function() {
   var cssChannel = lazypipe()
     .pipe($.csso)
     .pipe($.replace, 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap', 'fonts');
-  var assets = $.useref.assets({
-    searchPath: '{.tmp,app}'
-  });
+  var assets = $.useref({ searchPath: '{.tmp,app}' });
 
   return gulp.src('app/*.html')
-    .pipe(assets)
+    .pipe($.useref({ searchPath: '{.tmp,app}' }))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', cssChannel()))
-    .pipe(assets.restore())
-    .pipe($.useref())
     .pipe($.if('*.html', $.minifyHtml({
       conditionals: true,
       loose: true
@@ -49,10 +45,10 @@ gulp.task('html', ['styles'], function() {
 
 gulp.task('images', function() {
   return gulp.src('app/images/**/*')
-    .pipe($.cache($.imagemin({
+    .pipe($.imagemin({
       progressive: true,
       interlaced: true
-    })))
+    }))
     .pipe(gulp.dest('dist/images'));
 });
 
