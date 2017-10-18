@@ -24,10 +24,11 @@ h4{
   font-size: 2.25rem;
 }
 a{
-  color: #f8f8f8;
-  font-weight: 300;
+  color: $brand-primary;
+  text-decoration: none;
+  text-underline-position: unset;
   &:hover{
-    color: $brand-gray;
+    color: lighten($brand-primary, 10);
     text-decoration: none;
   }
 }

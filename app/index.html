@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="fi">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
@@ -26,122 +27,88 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="../bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/fi_FI/sdk.js#xfbml=1&version=v2.3&appId=334976506699483";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/fi_FI/sdk.js#xfbml=1&version=v2.3&appId=334976506699483";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <div class="container">
-      <div class="header text-center white-text">
-        <h1>Figi.fm</h1>
-        <img class="img-responsive center-block" src="images/figifm-logo.png" alt="Figi.fm – Keikkoja, joille täytyy päästä!" title="Figi.fm – Keikkoja, joille täytyy päästä!">
-        <h4>Keikkoja, joille täytyy päästä!</h4>
-      </div>
-      <div class="jumbotron row">
-        <div class="col-xs-12">
-          <h2 class="jumbotron-title">Beta -versio saatavilla Android -puhelimille:</h2>
-          <div class="figi-slider">
-            <div class="slick-slide"><img data-lazy="images/figi-upcoming-events.jpg" /></div>
-            <div class="slick-slide"><img data-lazy="images/figi-nearby-events.jpg" /></div>
-            <div class="slick-slide"><img data-lazy="images/figi-single-event.jpg" /></div>
-            <div class="slick-slide"><img data-lazy="images/figi-recommended-events.jpg" /></div>
-            <div class="slick-slide"><img data-lazy="images/figi-search.jpg" /></div>
-            <div class="slick-slide"><img data-lazy="images/figi-profile.jpg" /></div>
-            <div class="slick-slide"><img data-lazy="images/figi-settings.jpg" /></div>
-          </div>
+        <div class="header text-center white-text">
+            <h1>Figi.fm</h1>
+            <img class="img-responsive center-block" src="images/figifm-logo.png" alt="Figi.fm – Keikkoja, joille täytyy päästä!" title="Figi.fm – Keikkoja, joille täytyy päästä!">
+            <h4>Keikkoja, joille täytyy päästä!</h4>
         </div>
-        <div class="col-xs-12 info">
-          <span class="glyphicon glyphicon-info-sign show"></span>
-          <blockquote>Figi.fm on kehitteillä oleva livemusiikin ympärille rakentuva web- ja älypuhelinsovellus, joka tekee mieluisten keikkojen löytämisen helpoksi.</blockquote>
-        </div>
-        <div class="col-xs-12 form-wrap">
-          <h4>Kokeile Figi.fm:n Android-sovelluksen testiversiota!</h4>
-          <p><a class="android-app" title="Figi.fm Android-sovellus" href="https://play.google.com/store/apps/details?id=fm.figi.androidclient&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-AC-global-none-all-co-pr-py-PartBadges-Oct1515-1"><img alt="Get Figi.fm on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge.png" /></a></p>
-          <hr />
-          <h4>Figi.fm web-sovellus:</h4>
-            <p><a class="btn btn-success btn-lg" href="http://app.figi.fm" title="app.figi.fm">Testaa Figi.fm:n web-sovellusta</a></p>
-          <hr />
-          <h4>Voit myös liittyä tiedotuslistalle:</h4>
-          <form action="//figi.us10.list-manage.com/subscribe/post?u=4f689e6926bb14f22232dcbc5&amp;id=4504e0c320" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" class="validate center-block">
-            <div class="form-group">
-              <label for="mce-EMAIL">Sähköpostiosoitteesi:</label>
-              <input id="mce-EMAIL" type="email" class="form-control input-lg required" name="EMAIL" placeholder="lennon@email.com" required>
+        <div class="jumbotron row">
+            <div class="col-xs-12">
+                <h2 class="jumbotron-title">Beta -versio saatavilla Android -puhelimille:</h2>
+                <div class="figi-slider">
+                    <div class="slick-slide"><img data-lazy="images/figi-upcoming-events.jpg" /></div>
+                    <div class="slick-slide"><img data-lazy="images/figi-nearby-events.jpg" /></div>
+                    <div class="slick-slide"><img data-lazy="images/figi-single-event.jpg" /></div>
+                    <div class="slick-slide"><img data-lazy="images/figi-recommended-events.jpg" /></div>
+                    <div class="slick-slide"><img data-lazy="images/figi-search.jpg" /></div>
+                    <div class="slick-slide"><img data-lazy="images/figi-profile.jpg" /></div>
+                    <div class="slick-slide"><img data-lazy="images/figi-settings.jpg" /></div>
+                </div>
             </div>
-            <div id="mce-responses" class="clear">
-              <div class="response" id="mce-error-response" style="display:none"></div>
-              <div class="response" id="mce-success-response" style="display:none"></div>
-            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;"><input type="text" name="b_4f689e6926bb14f22232dcbc5_4504e0c320" tabindex="-1" value=""></div>
-            <button id="mc-embedded-subscribe" type="submit" class="btn btn-info btn-lg">Liity listalle!</button>
-            <small>(Lähetämme korkeintaan yhden infoviestin kuukaudessa)</small>
-          </form>
-          <p><strong>Muista myös vahvistaa listalle liittyminen sähköpostiisi lähetettävän varmistusviestin kautta!</strong></p>
+            <div class="col-xs-12 info">
+                <span class="glyphicon glyphicon-info-sign show"></span>
+                <blockquote>Figi.fm on <a href="https://jannejuhani.me">Jannen</a> harrasteluprojekti, jonka avulla on helpompi löytää mieluisia musakeikkoja.</blockquote>
+            </div>
+            <div class="col-xs-12 form-wrap">
+                <h4>Kokeile Figi.fm:n Android-sovelluksen testiversiota!</h4>
+                <p><a class="android-app" title="Figi.fm Android-sovellus" href="https://play.google.com/store/apps/details?id=fm.figi.androidclient&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-AC-global-none-all-co-pr-py-PartBadges-Oct1515-1"><img alt="Get Figi.fm on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge.png" /></a></p>
+                <hr />
+                <h4>Figi.fm web-sovellus:</h4>
+                <p><a class="btn btn-success btn-lg" href="http://app.figi.fm" title="app.figi.fm">Testaa Figi.fm:n web-sovellusta</a></p>
+            </div>
         </div>
-        <div class="social-buttons col-xs-12">
-          <h4>Kerro Figistä maailmalle!</h4>
-          <div class="fb-like" data-href="http://figi.fm" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" data-width="146"></div>
-          <div><a class="twitter-share-button" href="https://twitter.com/share?url=http://www.figi.fm&amp;via=figifm&amp;text=Keikkoja&comma;%20joille%20t&auml;ytyy%20p&auml;&auml;st&auml;&excl;&amp;hashtags=keikat&comma;figifm">Jaa Twitterissä</a></div>
-        </div>
-        <div class="social-media col-xs-12">
-          <h2>Figi.fm @ Facebook</h2>
-          <div class="fb-page" data-href="https://www.facebook.com/figifm" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/figifm"><a href="https://www.facebook.com/figifm">Figi.fm</a></blockquote></div></div>
-          <h2>Figi.fm @ Twitter</h2>
-            <a class="twitter-timeline" href="https://twitter.com/figifm" data-widget-id="581007003801223168">Twiittejä käyttäjältä @figifm</a>
-          </div>
-      </div>
 
-      <div class="footer text-center">
-        <p><a href="mailto:info@figi.fm"><i class="glyphicon glyphicon-envelope"></i> info@figi.fm</a> | <a href="https://facebook.com/figifm" title="Figi.fm @ Facebook">Facebook</a> | <a href="https://twitter.com/figifm" title="Figi.fm @ Twitter">Twitter</a> | <a href="https://instagram.com/figifm" title="Figi.fm @ Instagram">Instagram</a></p>
-        <p>figi.fm – keikkoja, joille täytyy päästä!</p>
-        <p class="coolio" title="Coolio!"><i class="glyphicon glyphicon-sunglasses"></i></p>
-      </div>
+        <div class="footer text-center">
+            <p><a href="mailto:jannejuhani@REMOVETHISgmail.com"><i class="glyphicon glyphicon-envelope"></i> jannejuhani [AT] gmail.com</a> | <a href="https://twitter.com/figifm" title="Figi.fm @ Twitter">Twitter</a>                | <a href="https://instagram.com/figifm" title="Figi.fm @ Instagram">Instagram</a></p>
+            <p>figi.fm – keikkoja, joille täytyy päästä!</p>
+            <p class="coolio" title="Coolio!"><i class="glyphicon glyphicon-sunglasses"></i></p>
+        </div>
     </div>
 
     <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-47974057-1');ga('send','pageview');
+        (function(b, o, i, l, e, r) {
+            b.GoogleAnalyticsObject = l;
+            b[l] || (b[l] =
+                function() {
+                    (b[l].q = b[l].q || []).push(arguments)
+                });
+            b[l].l = +new Date;
+            e = o.createElement(i);
+            r = o.getElementsByTagName(i)[0];
+            e.src = '//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e, r)
+        }(window, document, 'script', 'ga'));
+        ga('create', 'UA-47974057-1');
+        ga('send', 'pageview');
     </script>
-    <script>
-    window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
-    </script>
-    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script async type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/slick.js/slick/slick.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js scripts/plugins.js -->
-        <!--<script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
-        <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
-        <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
-        <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
-        <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
-        <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
-        <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
-        <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
-        <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
-        <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
-        <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
-        <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>-->
-        <!-- endbuild -->
 
-        <!-- build:js scripts/main.js -->
-        <script async src="scripts/main.js"></script>
-        <!-- endbuild -->
+    <!-- build:js scripts/main.js -->
+    <script async src="scripts/main.js"></script>
+    <!-- endbuild -->
 </body>
+
 </html>
